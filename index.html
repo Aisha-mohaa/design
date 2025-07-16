@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,82 +7,52 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
+
 </head>
-<body>
-    <div class=" sm:flex mt-5 mb-3 space-y-3">
-    <div class="space-y-4 ml-5">
-            <div class="">
-            <img class="w-24 h-24" src="./image/image.png" alt="">
-        </div>
-        <div>
-            <img class="w-24 h-24" src="./image/image.png" alt="">
-
-        </div>
-        <div>
-            <img class="w-24 h-24" src="./image/image.png" alt="">
-
-        </div>
+<body class="bg-pink-500 flex justify-center h-screen items-center ">
+    
+    <div class="bg-white border border-black rounded-lg px-5 py-16">
+  <div class="flex flex-col items-center space-y-4">
+    <h1 id="tiro" class="text-4xl text-blue-600 border border-black px-8 py-2 rounded-lg shadow-md">
+      0
+    </h1>
+    <div class="space-x-4">
+      <button id="plus" class="bg-green-600 text-white px-10 py-2 rounded-lg hover:bg-green-700 transition duration-300">🔘</button>
+      <button id="miniz" class="bg-blue-600 text-white px-10 py-2 rounded-lg hover:bg-red-700 transition duration-300">🔘</button>
+      <button id="res" class="bg-red-600 text-white px-10 py-2 rounded-lg hover:bg-red-700 transition duration-300">RESET</button>
     </div>
+  </div>
+</div>
 
-        <div class=" sm:flex ml-6">
-        <div>
-        <img class="w-80 h-56" src="./image/image.png" alt="">
+    <script>
+        const pluss = document.querySelector("#plus")
+        const miniz = document.querySelector("#miniz")
+        const tiro = document.querySelector("#tiro")
+        const res = document.querySelector("#res")
+       
 
-
-        </div>
-        <div class=" ml-5">
-            <p>brand <span class="font-thin">lg</span></p>
-            <p>brand <span class="font-thin">lg</span></p>
-            <p>brand <span class="font-thin">lg</span></p>
-            <h1 class="font-bold">lg hhs aWUUEUES</h1>
-            <h1 class="text-red-600">🌟🌟🌟🌟</h1>
-            <ul class="list-item">
-                <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, rem?</li>
-                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, rem?</li>
-
-                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, rem?</li>
-                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, rem?</li>
-            </ul>
-            <div class="sm:flex gap-5">
-            <button class="border border-red-700 text-red-500 rounded-lg px-4 py-2">
-  160cm (24)
-</button>
-
-            <p class="font-thin">12cm </p>
-            <p class="font-thin">12cm </p>
-            <p class="font-thin">12cm </p>
-            <p class="font-thin">12cm </p>
+        let coount =0
+        pluss.addEventListener("click",()=>{
+            coount +=1
+            tiro.textContent =coount
           
-            </div>
-        <h1 id="amount">$6000</h1>
-        <div class="mb-8 flex items-center">
-        <h1 id="counter">-1</h1>
-
-       <button id="btnInc" class="bg-green-600 px-14 py-2 rounded-lg text-2xl text-white ml-2 mt-10 font-bold">+</button>
-       <button id="btnDec" class="bg-blue-600 px-14 py-2 rounded-lg text-2xl text-white ml-2 mt-10 font-bold">-</button>
-     </div>
-        <button class=" bg-red-600 border border-red-700 text-white  rounded-lg px-4 py-2 ">
-  BUY NOW
-</button>
-            <button class="border border-red-700 text-black  rounded-lg px-4 py-2">
-  BUY NOW
-</button>
 
 
+        })
+        miniz.addEventListener("click",()=>{
+            coount -=1
+            tiro.textContent =coount
 
 
+        })
 
-        </div>
-
-            
-        </div>
-    </div>
-
-
-
+       let reset = 0
+        res.addEventListener("click",()=>{
+            reset =0
+            tiro.textContent =reset
+        })
 
 
-
-    <script src="in.js"></script>
+    </script>
 </body>
 </html>
